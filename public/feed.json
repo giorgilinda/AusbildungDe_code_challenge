@@ -1,0 +1,83 @@
+[
+  {
+    "customer_data": {
+      "id": "8d854b65-c3dc-45c3-aec8-db144c52d47e",
+      "slug": "acme",
+      "name": "Acme INC",
+      "description": "Wir sind ACME! Ihr kennt uns aus Film und Fernsehen",
+      "customer_status": "active",
+      "email": "coyote@acme.com",
+      "founding_year": 1920,
+      "employee_count": 1000
+    },
+
+    "job_postings_data": [
+      {
+        "name": "Das ist eine aktive Stellenanzeige für Acme INC 1",
+        "status": "active",
+        "description": "Ein tolles Job-Posting",
+        "imported": true,
+        "salary": 100,
+        "customer": "8d854b65-c3dc-45c3-aec8-db144c52d47e"
+      },
+      {
+        "name": "Das ist eine Stellenanzeige für Acme INC 2",
+        "status": "inactive",
+        "description": "Ein weiteres tolles Job-Posting mit mieser Bezahlung",
+        "salary": 1,
+        "customer": "8d854b65-c3dc-45c3-aec8-db144c52d47e"
+      }
+    ]
+  },
+
+  {
+    "customer_data": {
+      "id": "8d854b65-c3dc-45c3-aec8-db144c52d47e",
+      "slug": "ace-chemicals",
+      "name": "ACE Chemicals",
+      "description": "Wir sind ACE Chemicals! Der Joker ist ein guter Freund von uns",
+      "customer_status": "active",
+      "email": "joker@ace-chemicals.com"
+    },
+    "job_postings_data": []
+  },
+
+  {
+    "customer_data": {
+      "id": "5a62fde5-dfa3-484b-a99f-0d76f462b765",
+      "slug": "morley",
+      "name": "Morley",
+      "customer_website": "http://morley.com",
+      "founding_year": null,
+      "customer_status": "active",
+      "employee_count": 80000
+    },
+
+    "job_postings_data": [
+      {
+        "name": "Das ist eine Stellenanzeige für Morley 1",
+        "status": "active",
+        "description": "Ein tolles Job-Posting",
+        "imported": true,
+        "salary": 100,
+        "customer": "5a62fde5-dfa3-484b-a99f-0d76f462b765"
+      },
+      {
+        "name": "Das ist eine Stellenanzeige für Morley 2",
+        "status": "active",
+        "description": "Ein tolles Job-Posting mit richtig guter Bezahlung",
+        "imported": true,
+        "salary": 100000,
+        "customer": "5a62fde5-dfa3-484b-a99f-0d76f462b765"
+      },
+      {
+        "name": "Das ist eine Stellenanzeige für Morley 3",
+        "status": "inactive",
+        "description": "Ein weiteres tolles Job-Posting",
+        "imported": false,
+        "salary": 180,
+        "customer": "5a62fde5-dfa3-484b-a99f-0d76f462b765"
+      }
+    ]
+  }
+]
