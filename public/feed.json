@@ -8,7 +8,8 @@
       "customer_status": "active",
       "email": "coyote@acme.com",
       "founding_year": 1920,
-      "employee_count": 1000
+      "employee_count": 1000,
+      "logo": "http://acmelogos.com/images/logo-1.svg"
     },
 
     "job_postings_data": [
@@ -37,7 +38,8 @@
       "name": "ACE Chemicals",
       "description": "Wir sind ACE Chemicals! Der Joker ist ein guter Freund von uns",
       "customer_status": "active",
-      "email": "joker@ace-chemicals.com"
+      "email": "joker@ace-chemicals.com",
+      "logo": "http://acmelogos.com/images/logo-2.svg"
     },
     "job_postings_data": []
   },
@@ -50,7 +52,8 @@
       "customer_website": "http://morley.com",
       "founding_year": null,
       "customer_status": "active",
-      "employee_count": 80000
+      "employee_count": 80000,
+      "logo": "http://acmelogos.com/images/logo-3.svg"
     },
 
     "job_postings_data": [

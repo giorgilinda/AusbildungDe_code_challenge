@@ -9,8 +9,10 @@ export type CustomerType = {
   email: string;
   founding_year: number;
   employee_count: number;
+  logo: string;
 };
 
+//FIXME: fix CORS error
 export const CustomerAPI = {
   getAll: async () => {
     console.log("🪳", "getAll");
