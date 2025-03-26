@@ -7,7 +7,7 @@ const BaseTemplate = (props: { children: React.ReactNode }) => {
       <div className={styles.container}>
         <header className={styles.header}>
           <Image
-            src="https://www.ausbildung.de/assets/logo_footer-95ee0e4e402aced9b44b67c660e91a697cf985d7530c44d2ec556d97f06dfa48.svg"
+            src="https://www.ausbildung.de/assets/logo_footer-95ee0e4e402aced9b44b67c660e91a697cf985d7530c44d2ec556d97f06dfa48.svg?w=400q=75"
             alt="Ausbildung.de logo"
             width={123}
             height={32}
@@ -40,7 +40,7 @@ const BaseTemplate = (props: { children: React.ReactNode }) => {
           <div className={styles.footer_wrapper}>
             <div>
               <Image
-                src="https://www.ausbildung.de/assets/logo_footer-95ee0e4e402aced9b44b67c660e91a697cf985d7530c44d2ec556d97f06dfa48.svg"
+                src="https://www.ausbildung.de/assets/logo_footer-95ee0e4e402aced9b44b67c660e91a697cf985d7530c44d2ec556d97f06dfa48.svg?w=400q=75"
                 alt="Ausbildung.de logo"
                 width={123}
                 height={32}

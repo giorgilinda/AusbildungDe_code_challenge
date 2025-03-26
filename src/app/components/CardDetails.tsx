@@ -26,7 +26,7 @@ export const CardDetails: FC<PropsWithChildren<CardDetailsProps>> = ({
       {data.logo && (
         <Image
           className={styles.img}
-          src={data.logo}
+          src={`${data.logo}?w=400q=75`}
           alt={`${data.name} logo`}
           width={96}
           height={96}

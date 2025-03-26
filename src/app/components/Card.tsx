@@ -19,7 +19,7 @@ export const Card: FC<PropsWithChildren<CardProps>> = ({
         <Indicator status={data.customer_status} text={data.customer_status} />
         <Image
           className={styles.img}
-          src={data.logo}
+          src={`${data.logo}?w=400q=75`}
           alt={`${data.name} logo`}
           width={96}
           height={96}
