@@ -7,7 +7,7 @@ This repository is the result of Linda Giorgi's attempt at the Ausbildung.de cod
 |                 |                                                                          |
 | --------------- | ------------------------------------------------------------------------ |
 | Source          | [Repository](https://github.com/giorgilinda/AusbildungDe_code_challenge) |
-| Production link | [Vercel](https://Ausbildung.de-code-challenge.vercel.app/)               |
+| Production link | [Vercel](https://ausbildung-de-code-challenge.vercel.app/)               |
 
 ## Installation
 
