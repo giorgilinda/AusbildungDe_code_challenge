@@ -1,7 +1,7 @@
 import type { FC, PropsWithChildren } from "react";
 import styles from "./CardDetails.module.css";
 import Image from "next/image";
-import { Indicator } from "./Indicator";
+import { Indicator } from "../(Indicator)/Indicator";
 
 type CardDetailsProps = {
   data: {

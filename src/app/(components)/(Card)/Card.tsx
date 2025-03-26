@@ -1,7 +1,7 @@
 import type { FC, PropsWithChildren } from "react";
 import styles from "./Card.module.css";
 import Image from "next/image";
-import { Indicator } from "./Indicator";
+import { Indicator } from "../(Indicator)/Indicator";
 import { CustomerType } from "@/utils/CustomersUtils";
 
 type CardProps = {
@@ -26,7 +26,11 @@ export const Card: FC<PropsWithChildren<CardProps>> = ({
         />
         <h5 className={styles.name}>{data.name}</h5>
         <div className={styles.button_wrapper}>
-          <button type="button" onClick={() => buttonClickHandler(data.id)}>
+          <button
+            data-testid="customerDetailsButton"
+            type="button"
+            onClick={() => buttonClickHandler(data.id)}
+          >
             View details
           </button>
         </div>

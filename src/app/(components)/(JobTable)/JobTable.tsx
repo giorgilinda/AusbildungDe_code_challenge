@@ -1,7 +1,7 @@
 import type { FC, PropsWithChildren } from "react";
 import styles from "./JobTable.module.css";
 import { JobType } from "@/utils/CustomersUtils";
-import { Indicator } from "./Indicator";
+import { Indicator } from "../(Indicator)/Indicator";
 import classNames from "classnames";
 import { useJobContext } from "@/hooks/useJobContext";
 import { useRouter } from "next/navigation";

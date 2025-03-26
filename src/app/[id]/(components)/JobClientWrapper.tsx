@@ -3,7 +3,7 @@
 import { notFound, useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { useJobContext } from "@/hooks/useJobContext";
-import { CardDetails } from "@/app/components/CardDetails";
+import { CardDetails } from "@/app/(components)/(CardDetails)/CardDetails";
 
 const JobClientWrapper: React.FC = () => {
   const { job } = useJobContext();

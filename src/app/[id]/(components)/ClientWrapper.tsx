@@ -1,6 +1,6 @@
 "use client";
 
-import { CustomerDetails } from "@/app/components/CustomerDetails";
+import { CustomerDetails } from "@/app/(components)/CustomerDetails";
 import { useCustomerContext } from "@/hooks/useCustomerContext";
 import {
   CustomerType,
@@ -10,7 +10,7 @@ import {
 import { notFound, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import styles from "./ClientWrapper.module.css";
-import { JobTable } from "@/app/components/JobTable";
+import { JobTable } from "@/app/(components)/(JobTable)/JobTable";
 
 type ClientWrapperProps = {
   id: string;
@@ -43,7 +43,7 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({ id }) => {
       <button type="button" onClick={buttonClickHandler}>
         Back to customer list
       </button>
-      <h1>Customer details</h1>
+      <h1 data-testid="customerDetailsTitle">Customer details</h1>
       <div className={styles.wrapper}>
         {customer && <CustomerDetails customer={customer} />}
         {jobs && <JobTable postings={jobs} />}

@@ -57,13 +57,27 @@ Refer to the [package.json](https://github.com/giorgilinda/AusbildungDe_code_cha
 
 ## Testing
 
-Due to time restriction, I decided to create only an example of unit testing (using Jest) for one file (CustomersUtils.tsx).
+Due to time restriction, I decided to create only an example of each type of tests:
+
+1. unit testing (using Jest) for CustomersUtils.tsx.
+2. for e2e testing (using Playwright) for AppClientWrapper.tsx.
+
 NOTE: I noticed an error in the data, since the second customer have the same ID as the first, which, naturally, caused some missmatch. I changed the data so that we have unique IDs.
 
 ```bash
 npm run test      # for unit testing
-npm run test:e2e  # for e2e testing
+npm run test:e2e  # for e2e testing and integration
 ```
+
+## Storybook
+
+Due to time restriction, I decided to create only an example of one file with 2 variations of the component: CardDetails.stories.tsx
+
+```bash
+npm run storybook
+```
+
+Now you can access the storybook page from http://localhost:6006
 
 ## Deployment
 

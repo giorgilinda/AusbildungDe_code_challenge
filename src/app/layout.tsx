@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import BaseLayout from "../app/templates/BaseTemplate";
+import BaseLayout from "./templates/BaseTemplate";
 
 export const metadata: Metadata = {
   title: "Ausbildung.de code challenge",

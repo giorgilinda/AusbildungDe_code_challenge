@@ -1,6 +1,6 @@
 import type { FC, PropsWithChildren } from "react";
 import { CustomerType } from "@/utils/CustomersUtils";
-import { CardDetails } from "./CardDetails";
+import { CardDetails } from "./(CardDetails)/CardDetails";
 
 type CustomerDetailsProps = {
   customer: CustomerType;
