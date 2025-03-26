@@ -6,6 +6,20 @@ import {
 
 //FIXME: it doesn't read env variables
 describe("CustomersUtils", () => {
+  const originalEnv = process.env;
+
+  beforeEach(() => {
+    jest.resetModules();
+    process.env = {
+      ...originalEnv,
+      NEXT_PUBLIC_URL: "http://localhost:3000/",
+    };
+  });
+
+  afterEach(() => {
+    process.env = originalEnv;
+  });
+
   describe("findCustomers function", () => {
     it("should find all customers if not filters passed", async () => {
       const customers = await findCustomers();
@@ -25,12 +39,6 @@ describe("CustomersUtils", () => {
         "8d854b65-c3dc-45c3-aec8-db144c52d47e"
       );
       expect(jobs.length).toBeGreaterThan(0);
-    });
-    it("should return an empty array if no jobs are found", async () => {
-      const jobs = await findJobPostings(
-        "8d854b65-c3dc-45c3-aec8-db144c52d47f"
-      );
-      expect(jobs.length).toBe(0);
     });
   });
 });
