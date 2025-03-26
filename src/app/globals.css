@@ -40,3 +40,23 @@ a {
     color-scheme: dark;
   }
 }
+
+button,
+.button {
+  display: inline-block;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #6d28d9;
+
+  :hover {
+    background-color: #5b21b6;
+  }
+}

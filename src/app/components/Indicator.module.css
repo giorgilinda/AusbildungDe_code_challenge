@@ -1,0 +1,55 @@
+.indicator {
+  position: absolute;
+  border-width: 2px;
+  border-color: #fff;
+  width: 0.875rem;
+  height: 0.875rem;
+  right: 10px;
+  border-radius: 10px;
+
+  &:global(.active) {
+    background-color: #10b981;
+  }
+
+  &:global(.inactive) {
+    background-color: #ef4444;
+  }
+}
+.wrapper {
+  display: inline-flex;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  align-items: center;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  position: absolute;
+  right: 10px;
+
+  &:global(.active) {
+    color: #065f46;
+    background-color: #d1fae5;
+  }
+
+  &:global(.inactive) {
+    color: #991b1b;
+    background-color: #fee2e2;
+  }
+}
+.dot {
+  border-radius: 9999px;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 5px;
+
+  &:global(.active) {
+    background-color: #10b981;
+  }
+
+  &:global(.inactive) {
+    background-color: #ef4444;
+  }
+}

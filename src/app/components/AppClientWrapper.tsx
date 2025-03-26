@@ -1,12 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { CustomerType } from "../api/customers/route";
 import json from "../../../public/feed.json";
 import { Card } from "./Card";
 import styles from "./AppClientWrapper.module.css";
+import { useRouter } from "next/navigation";
+import { CustomerType } from "@/utils/CustomersUtils";
 
 export const AppClientWrapper: React.FC = () => {
+  const router = useRouter();
   const [customers, setCustomers] = useState<CustomerType[]>([]);
 
   useEffect(() => {
@@ -16,11 +18,18 @@ export const AppClientWrapper: React.FC = () => {
     setCustomers(data as CustomerType[]);
   }, []);
 
+  const showDetails = (id: string) => {
+    router.push(`/${id}`);
+  };
+
   return (
-    <div className={styles.wrapper}>
-      {customers.map((customer, key) => (
-        <Card key={key} data={customer} />
-      ))}
-    </div>
+    <>
+      <h1>Customer list</h1>
+      <div className={styles.wrapper}>
+        {customers.map((customer, key) => (
+          <Card key={key} data={customer} buttonClickHandler={showDetails} />
+        ))}
+      </div>
+    </>
   );
 };

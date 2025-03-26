@@ -1,16 +1,5 @@
+import { CustomerType } from "@/utils/CustomersUtils";
 import { api } from "../config/axiosConfigs";
-
-export type CustomerType = {
-  id: string;
-  slug: string;
-  name: string;
-  description: string;
-  customer_status: string;
-  email: string;
-  founding_year: number;
-  employee_count: number;
-  logo: string;
-};
 
 //FIXME: fix CORS error
 export const CustomerAPI = {
