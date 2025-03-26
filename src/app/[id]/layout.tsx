@@ -1,4 +1,3 @@
-import { CustomerProvider } from "@/contexts/customerContext";
 import { JobProvider } from "@/contexts/jobContext";
 
 export default async function Layout(props: {
@@ -7,9 +6,7 @@ export default async function Layout(props: {
 }) {
   return (
     <>
-      <CustomerProvider>
-        <JobProvider>{props.children}</JobProvider>
-      </CustomerProvider>
+      <JobProvider>{props.children}</JobProvider>
     </>
   );
 }

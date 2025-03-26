@@ -6,7 +6,7 @@ import { CustomerType } from "@/utils/CustomersUtils";
 
 type CardProps = {
   data: CustomerType;
-  buttonClickHandler: (id: string) => void;
+  buttonClickHandler: (customer: CustomerType) => void;
 };
 
 export const Card: FC<PropsWithChildren<CardProps>> = ({
@@ -29,7 +29,7 @@ export const Card: FC<PropsWithChildren<CardProps>> = ({
           <button
             data-testid="customerDetailsButton"
             type="button"
-            onClick={() => buttonClickHandler(data.id)}
+            onClick={() => buttonClickHandler(data)}
           >
             View details
           </button>

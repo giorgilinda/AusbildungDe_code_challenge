@@ -1,5 +1,3 @@
-import json from "../../public/feed.json";
-
 export type CustomerType = {
   id: string;
   slug: string;
@@ -21,19 +19,33 @@ export type JobType = {
   customer: string;
 };
 
-export const findCustomer = (id?: string) => {
-  const customers = json.map((data) => data.customer_data);
-  if (!id) {
-    return customers;
-  }
+export const findCustomers = async (func?: (d: CustomerType[]) => void) => {
+  const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/customers`)
+    .then((response) => response.json())
+    .then((d) => d as CustomerType[]);
 
-  return customers.filter((item) => id && item.id === id);
+  if (func) {
+    func(data);
+  }
+  return data;
 };
 
-export const findJobPostings = (id?: string) => {
-  const postings = json.filter((data) =>
-    data.job_postings_data.some((job) => job.customer === id)
-  );
+export const findCustomerId = async (id: string) => {
+  const data = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/customers?customerId=${id}`
+  )
+    .then((response) => response.json())
+    .then((d) => d as CustomerType);
 
-  return postings.length > 0 ? postings[0].job_postings_data : [];
+  return data;
+};
+
+export const findJobPostings = async (customerId: string) => {
+  const data = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/jobs?customerId=${customerId}`
+  )
+    .then((response) => response.json())
+    .then((d) => d as JobType[]);
+
+  return data;
 };

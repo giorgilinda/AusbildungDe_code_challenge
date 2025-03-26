@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { CardDetails } from "./CardDetails";
-import "../../app/globals.css";
+import "../../globals.css";
 
 const meta: Meta<typeof CardDetails> = {
   component: CardDetails,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import BaseLayout from "./templates/BaseTemplate";
+import { CustomerProvider } from "@/contexts/customerContext";
 
 export const metadata: Metadata = {
   title: "Ausbildung.de code challenge",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <BaseLayout>{children}</BaseLayout>
+        <BaseLayout>
+          <CustomerProvider>{children}</CustomerProvider>
+        </BaseLayout>
       </body>
     </html>
   );

@@ -4,10 +4,9 @@ export const revalidate = 60;
 
 export async function GET(request: NextRequest) {
   const customerId = request.nextUrl.searchParams.get("customerId");
-  const customers = json.map((data) => data.customer_data);
-  const ret = customerId
-    ? customers.filter((customer) => customer.id === customerId)[0]
-    : customers;
+  const jobs = json.filter((data) =>
+    data.job_postings_data.some((job) => job.customer === customerId)
+  )[0].job_postings_data;
 
-  return Response.json(ret);
+  return Response.json(jobs);
 }

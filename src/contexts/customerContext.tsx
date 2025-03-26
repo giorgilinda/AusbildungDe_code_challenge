@@ -6,12 +6,12 @@ import { CustomerContext } from "@/hooks/useCustomerContext";
 import { CustomerType } from "@/utils/CustomersUtils";
 
 export type CustomerContextType = {
-  customer: CustomerType | null;
+  customer: CustomerType;
   saveCustomer: (customer: CustomerType) => void;
 };
 
 export const CustomerProvider = ({ children }: { children: ReactNode }) => {
-  const [customer, setCustomer] = useState<CustomerType | null>(null);
+  const [customer, setCustomer] = useState<CustomerType>({} as CustomerType);
 
   const saveCustomer = (newCustomer: CustomerType) => {
     setCustomer(newCustomer);

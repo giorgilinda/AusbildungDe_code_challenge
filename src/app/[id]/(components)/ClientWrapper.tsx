@@ -4,10 +4,11 @@ import { CustomerDetails } from "@/app/(components)/CustomerDetails";
 import { useCustomerContext } from "@/hooks/useCustomerContext";
 import {
   CustomerType,
-  findCustomer,
+  findCustomerId,
   findJobPostings,
+  JobType,
 } from "@/utils/CustomersUtils";
-import { notFound, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import styles from "./ClientWrapper.module.css";
 import { JobTable } from "@/app/(components)/(JobTable)/JobTable";
@@ -19,20 +20,19 @@ type ClientWrapperProps = {
 const ClientWrapper: React.FC<ClientWrapperProps> = ({ id }) => {
   const { customer, saveCustomer } = useCustomerContext();
   const router = useRouter();
-  const [jobs, setJobs] = useState(findJobPostings(id));
+  const [data, setData] = useState<CustomerType>(customer);
+  const [jobs, setJobs] = useState<JobType[]>([]);
 
   useEffect(() => {
-    if (!customer) {
-      const cust = findCustomer(id);
-
-      if (cust.length === 0 || !cust[0]) {
-        notFound();
+    (async function () {
+      if (!data || Object.keys(data).length === 0) {
+        const c = await findCustomerId(id);
+        setData(c);
+        saveCustomer(c);
       }
-
-      saveCustomer(cust[0] as CustomerType);
-      setJobs(findJobPostings(cust[0].id));
-    }
-  }, [customer, id, saveCustomer]);
+      setJobs(await findJobPostings(id));
+    })();
+  }, [data, id, saveCustomer]);
 
   const buttonClickHandler = () => {
     router.push("/");
@@ -45,8 +45,8 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({ id }) => {
       </button>
       <h1 data-testid="customerDetailsTitle">Customer details</h1>
       <div className={styles.wrapper}>
-        {customer && <CustomerDetails customer={customer} />}
-        {jobs && <JobTable postings={jobs} />}
+        <CustomerDetails customer={data} />
+        <JobTable postings={jobs} />
       </div>
     </>
   );
