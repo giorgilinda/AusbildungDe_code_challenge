@@ -8,9 +8,9 @@ const nextConfig: NextConfig = {
         hostname: "**.vercel.app",
       },
       {
-        protocol: "http",
-        hostname: "acmelogos.com",
-        pathname: "/images/**",
+        protocol: "https",
+        hostname: "www.svgrepo.com",
+        pathname: "/show/**",
       },
     ],
   },
