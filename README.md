@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ausbildung.de code challenge
 
-## Getting Started
+This repository is the result of Linda Giorgi's attempt at the Ausbildung.de code challenge.
 
-First, run the development server:
+## Useful links
+
+|                 |                                                                          |
+| --------------- | ------------------------------------------------------------------------ |
+| Source          | [Repository](https://github.com/giorgilinda/AusbildungDe_code_challenge) |
+| Production link | [Vercel](https://Ausbildung.de-code-challenge.vercel.app/)               |
+
+## Installation
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/giorgilinda/AusbildungDe_code_challenge.git
+git checkout main
+```
+
+2. Install the modules of the project:
+
+```bash
+npm install
+```
+
+## Usage
+
+Once the installation is complete, you can run the shop locally:
+
+1. Run the shop locally:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Open http://localhost:3000 in your preferred browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Refer to the [package.json](https://github.com/giorgilinda/AusbildungDe_code_challenge/blob/main/package.json) for the latest information.
+| Dependency | Version |
+| ---------- | ---------- |
+| Node | \>=20.14.1 |
+| React | 19.0.0 |
+| Next.js | \>=15.2.0 |
+| TypeScript | \>=5.7.3 |
+| Jest | \>=29.7.0 |
+| Playwright | \>=1.50.1 |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```shell
+//FIXME: add strusture
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Testing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Due to time restriction, I decided to create only an example of unit testing (using Jest) for one file (CarsUtil.tsx), but the project is setup in a way it could be easily contain also e2e and integration testing (using Playwright).
 
-## Deploy on Vercel
+```bash
+npm run test      # for unit testing
+npm run test:e2e  # for e2e testing (not in use as explained above)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. You can generate an optimized production build with:
+
+```bash
+npm run build
+```
+
+2. To test the generated build, run:
+
+```bash
+npm run start
+```
+
+3. Open http://localhost:3000 in your preferred browser to see the result.

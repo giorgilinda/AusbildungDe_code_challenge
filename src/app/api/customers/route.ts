@@ -1,3 +1,4 @@
+/*
 import { CustomerType } from "@/utils/CustomersUtils";
 import { api } from "../config/axiosConfigs";
 
@@ -41,3 +42,11 @@ export const CustomerAPI = {
     });
   },
 };
+*/
+
+import json from "../../../../public/feed.json";
+export const revalidate = 60;
+
+export async function GET() {
+  return Response.json(json);
+}
