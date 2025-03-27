@@ -9,5 +9,8 @@ export async function GET(request: NextRequest) {
     ? customers.filter((customer) => customer.id === customerId)[0]
     : customers;
 
-  return Response.json(ret);
+  return new Response(JSON.stringify(ret), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
 }

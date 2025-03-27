@@ -52,7 +52,36 @@ Refer to the [package.json](https://github.com/giorgilinda/AusbildungDe_code_cha
 ## Project Structure
 
 ```shell
-//FIXME: add structure
+.
+├── .github                         # GitHub folder
+├── .storybook                      # Storybook folder
+├── public                          # Public assets folder
+├── src
+│   ├── app                         # Next JS App (App Router)
+│   │   ├── (components)            # React components
+│   │   ├── [id]                    # Pages and components for customers and jobs
+│   │   ├── api                     # APIs
+│   │   ├── templates               # Templates folder
+│   │   ├── favicon.ico             # favicon
+│   │   ├── globals.css             # Global css
+│   │   ├── layout.tsx              # Root layout
+│   │   ├── not-found.tsx           # 404 page
+│   │   └── page.tsx                # Index page
+│   ├── contexts                    # Contexts folder
+│   ├── hooks                       # Custom hooks definitions
+│   ├── utils                       # Utilities folder
+│   └── middleware.ts               # Middleware code
+├── tests
+│   ├── e2e                         # E2E tests, also includes Monitoring as Code
+│   └── integration                 # Integration tests
+├── .gitignore                      # GIT untracked files configuration
+├── eslint.config.mjs               # EsLint configuration
+├── jest.config.js                  # Jest configuration
+├── next.config.ts                  # NextJS configuration
+├── playwright.config.ts            # Playwright configuration
+├── README.md                       # README file
+├── tsconfig.json                   # Typescript configuration
+└── vitest.config.js                # Vite configuration
 ```
 
 ## Testing

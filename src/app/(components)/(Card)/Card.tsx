@@ -23,6 +23,7 @@ export const Card: FC<PropsWithChildren<CardProps>> = ({
           alt={`${data.name} logo`}
           width={96}
           height={96}
+          priority
         />
         <h5 className={styles.name}>{data.name}</h5>
         <div className={styles.button_wrapper}>

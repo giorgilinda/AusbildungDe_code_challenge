@@ -4,7 +4,6 @@ import {
   findJobPostings,
 } from "./CustomersUtils";
 
-//FIXME: it doesn't read env variables
 describe("CustomersUtils", () => {
   const originalEnv = process.env;
 
